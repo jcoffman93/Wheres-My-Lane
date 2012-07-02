@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/quickpager.jquery.js"></script>
+		<script type="text/javascript" src="js/getMessages.js"></script>
+		<link rel="stylesheet" type="text/css" href="layout.css">
+		<script type="text/javascript">
+			
+			//paginate message list (BUG)
+			//$('ul.messages').quickPager({pageSize:"2"});
+			
+		</script>
+	</head>
+	
+	<body onLoad="getMessages()">
+		<div id="wrap">
+			<div id="main">
+				<center><h1>Updates</h1></center>
+				<ul class="messages"</ul>
+			</div>
+		</div>
+		
+		<div id="footer">
+        	<footer>
+        		<ul>
+        			<li><a href="index.html"><img src="img/img_report_link.png"></a></li>
+        			<li><a href="map_page.html"><img src="img/img_map_link.png"></a></li> 	   		
+    	   			<li><a href="updates_page.html"><img src="img/img_update_link.png"></a></li>
+    	   			<li><a href="about_page.html"><img src="img/img_about_link.png"></a></li>
+    	   		</ul>
+        	</footer>
+    	</div>
+    	
+    	<center><div><img src='img/WML_Background_fun.png' class='bg'</div></center>
+	
+	</body>
+</html>

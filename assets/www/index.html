@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geolocation</title>
+
+    <script type="text/javascript" charset="utf-8" src="js/cordova-1.8.0.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/sendPosition.js"></script>
+    <link rel="stylesheet" type="text/css" href="layout.css">
+    <script type="text/javascript">
+    
+    	document.addEventListener("ready", onDeviceReady(), false);
+    	var watchId=null;
+    	
+    	// Start GPS when device is ready	
+    	function onDeviceReady() {
+    		navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true }); 
+    		watchId = navigator.geolocation.watchPosition(onSuccess, onError, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+    		document.addEventListener("pause", onPause(), false);
+    		document.addEventListener("resume", onResume(), false);
+    	}
+    	
+    	function onPause() {
+    		if (watchId != null) {
+    			navigator.geolocation.clearWatch(watchId);
+    			watchId = null;
+    		}
+    	}
+    
+    	function onResume() {	
+    		var watchId = navigator.geolocation.watchPosition(onSuccess, onError, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+    	}
+    
+    	
+		// onSuccess Geolocation
+    	function onSuccess(position) {
+    		var element=document.getElementById("accuracy");
+    		element.innerHTML="Accuracy: "+position.coords.accuracy+"m";
+    		
+    	}
+
+    	// onError Callback receives a PositionError object
+    	function onError(error) {
+        	alert('code: '    + error.code    + '\n' +
+            	'message: ' + error.message + '\n');
+    	}
+    
+    </script>
+		
+  </head>
+  <body>
+
+    <div id="wrap">
+        <div id="main">
+        	<div id="button">
+            	<center><button type="button" onClick="sendPosition()"><img src="img/img_report_icon.png"></button></center>
+            	<center><p id="accuracy">Accuracy:</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <footer>
+        	<ul>
+        		<li><a href="index.html"><img src="img/img_report_link.png"></a></li>
+        		<li><a href="map_page.html"><img src="img/img_map_link.png"></a></li> 	   		
+    	   		<li><a href="updates_page.html"><img src="img/img_update_link.png"></a></li>
+    	   		<li><a href="about_page.html"><img src="img/img_about_link.png"></a></li>
+    	   	</ul>
+        </footer>
+    </div>
+    
+    <center><div><img src='img/WML_Background_fun.png' class='bg'</div></center>
+  
+  </body>
+</html>
