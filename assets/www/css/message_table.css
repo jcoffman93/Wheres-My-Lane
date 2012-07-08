@@ -1,0 +1,12 @@
+table#messages {
+	overflow:scroll;
+	border-collapse: separate;
+	border-spacing: 3px;
+}
+
+#messages td {
+	border:1px solid  #C8C8DA;
+	background-color: #C8C8DA;
+	padding:10px;
+}
+div#time { display:block; }

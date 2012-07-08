@@ -2,29 +2,32 @@
 <html>
 	
 	<head>
-		<link rel="stylesheet" type="text/css" href="layout.css">
+        <script type="text/javascript" src="js/link_to_page.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/layout.css">
 	</head>
 	
 	<body>
 
+    <div id="header">
+        <center><img src="img/WML_header.png"></center>
+    </div>
+
     <div id="wrap">
         <div id="main">
             <h1><center>About</center></h1>
-            We are completely and utterly uninteresting. Simply reading about us will diminish your intelligence.
+            Where's My Lane is an application developed by three students attending Brandeis University. It was designed to help the City of Boston collect data on the incidence of double parked cars. The city will use this data to decide how to deploy its resources to alleviate the issue in problem areas.
         </div>
     </div>
     <div id="footer">
         <footer>
         	<ul>
-        		<li><a href="index.html"><img src="img/img_report_link.png"></a></li>
-        		<li><a href="map_page.html"><img src="img/img_map_link.png"></a></li> 	   		
-    	   		<li><a href="updates_page.html"><img src="img/img_update_link.png"></a></li>
-    	   		<li><a href="about_page.html"><img src="img/img_about_link.png"></a></li>
+        		<li><span ontouchstart="link_report()"><img src="img/img_report_link.png"></span></li>
+                <li><span ontouchstart="link_map()"><img src="img/img_map_link.png"></span></li>            
+                <li><span ontouchstart="link_updates()"><img src="img/img_update_link.png"></span></li>
+                <li><span ontouchstart="link_about()"><img src="img/img_about_link.png"></span></li>
     	   	</ul>
         </footer>
     </div>
-    
-    <center><div><img src='img/WML_Background_fun.png' class='bg'</div></center>
   
   </body>
   

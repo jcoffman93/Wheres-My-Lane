@@ -1,14 +1,24 @@
 html, body {height: 100%;}
 
+img {max-width: 100%;}
+#header {
+	padding:0px;
+	position:absolute;
+	height:40px;
+	background-color:#ddddff;
+	}
 #wrap {min-height: 100%;}
 
-#main {overflow:auto;
-	padding-top:10px;
+#main {
+	overflow:hidden;
+	padding-top:40px;
 	padding-bottom: 60px;}  /* must be same height as the footer */
 
-#footer {position: relative;
+#footer {
+	position: relative;
 	margin-top: -60px; /* negative value of footer height */
 	height: 50px;
+	background-color: #ddddff;
 	clear:both;} 
 #button {
 	padding: 100px;
@@ -21,7 +31,7 @@ html, body {height: 100%;}
 
 #footer li {display:inline;}
 
-#footer a {padding:10px;}
+#footer span {padding:10px;}
 
 body {color:rgb(0,0,0);}
 

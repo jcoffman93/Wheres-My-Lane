@@ -2,15 +2,21 @@
 <html>
 	
 	<head>
-		<link rel="stylesheet" type="text/css" href="layout.css">
-		<link rel="stylesheet" type="text/css" href="map_layout.css">
+		<link rel="stylesheet" type="text/css" href="css/layout.css">
+		<link rel="stylesheet" type="text/css" href="css/map_layout.css">
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="js/link_to_page.js"></script>
 		<script type="text/javascript" src="js/rendermap.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta charset="UTF-8">
 	</head>
 	
 	<body onLoad="initialize()">
+
+		<div id="header">
+        	<center><img src="img/WML_header.png"></center>
+    	</div>
+
 		<div id="wrap">
 			<div id="main">
 				<center><h1>Map</h1></center>
@@ -21,15 +27,13 @@
 		<div id="footer">
         	<footer>
         		<ul>
-        			<li><a href="index.html"><img src="img/img_report_link.png"></a></li>
-        			<li><a href="map_page.html"><img src="img/img_map_link.png"></a></li> 	   		
-    	   			<li><a href="updates_page.html"><img src="img/img_update_link.png"></a></li>
-    	   			<li><a href="about_page.html"><img src="img/img_about_link.png"></a></li>
+        			<li><span ontouchstart="link_report()"><img src="img/img_report_link.png"></span></li>
+        		<li><span ontouchstart="link_map()"><img src="img/img_map_link.png"></span></li> 	   		
+    	   		<li><span ontouchstart="link_updates()"><img src="img/img_update_link.png"></span></li>
+    	   		<li><span ontouchstart="link_about()"><img src="img/img_about_link.png"></span></li>
     	   		</ul>
         	</footer>
     	</div>
-    	
-    	<center><div><img src='img/WML_Background_fun.png' class='bg'</div></center>
 	
 	</body>
 </html>
