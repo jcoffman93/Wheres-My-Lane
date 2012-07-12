@@ -1,12 +1,15 @@
-table#messages {
-	overflow:scroll;
-	border-collapse: separate;
-	border-spacing: 3px;
+ul#messages {
+	list-style-type:none;
+	overflow:auto;
+	margin:0px;
+	padding:0px;
 }
 
-#messages td {
-	border:1px solid  #C8C8DA;
-	background-color: #C8C8DA;
+#messages li {
+	margin-left:3px;
+	border:1px solid  #000000;
+	border-style:solid none solid none;
+	background-color: #ffffff;
 	padding:10px;
 }
 div#time { display:block; }

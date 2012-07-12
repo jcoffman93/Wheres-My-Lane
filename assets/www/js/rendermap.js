@@ -23,10 +23,12 @@ function initialize() {
     }
   };
   map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+  $.getJSON('http://electric-galaxy-9820.herokuapp.com/reports.json', function(data) {
+      for(i=0; i<data.length; i++) {
+        addMarker(data[i]["latitude"], data[i]["longitude"]);
+      }
+  });
 
-  //BIKE STUFF
-  var bikeLayer = new google.maps.BicyclingLayer();
-  bikeLayer.setMap(map);
 }
 
 function addMarker(lat, long){

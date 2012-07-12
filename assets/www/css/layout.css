@@ -1,11 +1,19 @@
-html, body {height: 100%;}
+html {height:100%;}
+
+body {
+	height:100%;
+	margin:0;
+	padding:0;
+}
 
 img {max-width: 100%;}
+
 #header {
 	padding:0px;
 	position:absolute;
 	height:40px;
 	background-color:#ddddff;
+	clear:both;
 	}
 #wrap {min-height: 100%;}
 
@@ -17,12 +25,15 @@ img {max-width: 100%;}
 #footer {
 	position: relative;
 	margin-top: -60px; /* negative value of footer height */
-	height: 50px;
+	height: 60px;
 	background-color: #ddddff;
 	clear:both;} 
 #button {
-	padding: 100px;
+	overflow:hidden;
 }
+
+#footer {z-index:15;}
+
 #footer ul {
 	list-style-type:none;
 	margin:0;
@@ -35,11 +46,23 @@ img {max-width: 100%;}
 
 body {color:rgb(0,0,0);}
 
-.bg {
-    width:100%;
+#frame1 {
+	position:absolute;
+
+}
+
+#frame2 {
+	position:absolute;
+}
+
+#map_canvas {
+    margin: 0;
+    padding: 60%;
     height: 100%;
-    position: absolute;
-    top:0;
-    left: 0;
-    z-index: -5000;
+    position:fixed; 
+    top:0px;
+}
+
+.content {
+	padding: 5px;
 }
