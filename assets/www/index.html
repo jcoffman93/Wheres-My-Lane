@@ -21,7 +21,8 @@
     			window.location="signup.html";
     		}
             if(!storage.getItem("show_warning")){
-                //alert("Please come to a complete stop before using this app. Any reports you send will be ignored if they are sent while you are moving. We are not responsible for any injuries incurred as a result of using this app.")
+                alert("Please come to a complete stop before using this app. Any reports you send will be ignored if they are sent while you are moving. We are not responsible for any injuries incurred as a result of using this app.");
+                storage.setItem("show_warning", true);
             }
     		getLocation();
     	}

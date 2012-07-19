@@ -9,19 +9,17 @@ img {max-width: 100%;}
 .header {
 	top:0px;
 	left:0px;
-	padding-top:2px;x
+	padding-top:2px;
 	position:fixed;
 	z-index: 50;
-	/*height:40px;*/
+	height:40px;
 	width:100%;
 	background-color:#e0e2e2;
 	border-bottom:solid 1px #c9cbcb;
 }
 
-.content {
-	max-height:100%;
-	overflow:auto;
-	position:relative;
+#content {
+	min-height:100%;
 	padding-top:40px;	/* must be same height as header */
 	padding-bottom: 60px; /* must be same height as the footer */
 }  
@@ -43,8 +41,8 @@ img {max-width: 100%;}
 	margin-top: -60px; 
 	height: 60px;
 	width: 100%;
-	background-color: #ede4eb;
-	border-top:solid 1px #d2cad0;
+	background-color: #e0e2e2;
+	border-top:solid 1px #c9cbcb;
 } 
 
 .footer ul {
