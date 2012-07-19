@@ -1,6 +1,7 @@
-function getMessages() {
-	setInterval(function() {displayMessages()}, 5000);
-}
+$(document).ready(function() {
+  displayMessages();
+  //setInterval(function() {displayMessages()}, 10000);
+});
 
 function displayMessages() {
 	$.getJSON('http://electric-galaxy-9820.herokuapp.com/messages.json', function(data) {
@@ -10,5 +11,6 @@ function displayMessages() {
   		}
   		htmlstring=items.join('');
   		$('#messages').html(htmlstring);
+      var myScroll=new iScroll("wrapper");
 	});
 }

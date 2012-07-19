@@ -1,58 +1,100 @@
-html {height:100%;}
-
-body {
-	height:100%;
+html, body {
 	margin:0;
 	padding:0;
+	border:0;
 }
 
 img {max-width: 100%;}
 
-#header {
-	padding:0px;
-	position:absolute;
-	height:40px;
-	background-color:#ddddff;
-	clear:both;
-	}
-#wrap {min-height: 100%;}
-
-#main {
-	overflow:hidden;
-	padding-top:40px;
-	padding-bottom: 60px;}  /* must be same height as the footer */
-
-#footer {
-	position: relative;
-	margin-top: -60px; /* negative value of footer height */
-	height: 60px;
-	background-color: #ddddff;
-	clear:both;} 
-#button {
-	overflow:hidden;
+.header {
+	top:0px;
+	left:0px;
+	padding-top:2px;x
+	position:fixed;
+	z-index: 50;
+	/*height:40px;*/
+	width:100%;
+	background-color:#e0e2e2;
+	border-bottom:solid 1px #c9cbcb;
 }
 
-#footer {z-index:15;}
+.content {
+	max-height:100%;
+	overflow:auto;
+	position:relative;
+	padding-top:40px;	/* must be same height as header */
+	padding-bottom: 60px; /* must be same height as the footer */
+}  
 
-#footer ul {
+#wrapper {
+	max-height:100%;
+	overflow:auto;
+	position:relative;
+	padding-top:40px;
+	padding-bottom: 100px;
+}
+
+.footer {
+	
+	position: fixed;
+	bottom:0px;
+	left:0px;
+	z-index: 50;
+	margin-top: -60px; 
+	height: 60px;
+	width: 100%;
+	background-color: #ede4eb;
+	border-top:solid 1px #d2cad0;
+} 
+
+.footer ul {
 	list-style-type:none;
 	margin:0;
 	padding:0;
 }
 
-#footer li {display:inline;}
+.footer li {display:inline;}
 
-#footer span {padding:10px;}
+.footer span {padding:4%;}
 
-body {color:rgb(0,0,0);}
+#button { 
+	height:100%;
+	position:absolute; 
+}
 
 #frame1 {
+	z-index:5;
 	position:absolute;
-
 }
 
 #frame2 {
 	position:absolute;
+}
+
+#signup_box {
+	margin-top:40%;
+	margin-left:5%;
+	margin-right: 5%;
+	padding-top:3%;
+	padding-bottom: 3%;
+	z-index:50;
+	background-color:#e0e2e2;
+	/*border:solid 2px #ffffff;*/
+	border-radius:10px;
+}
+
+#stripes {
+	min-height: 100%;
+	background-color:#4e4ef4;
+	background-image:-webkit-gradient(
+		linear, 
+		0% 0%, 
+		0% 100%, 
+		from(#b0cdde), 
+		color-stop(50%, #b0cdde), 
+		color-stop(50%, #77a8bf), 
+		to(#77a8bf));
+	background-size: 50px 50px;
 }
 
 #map_canvas {
@@ -63,6 +105,6 @@ body {color:rgb(0,0,0);}
     top:0px;
 }
 
-.content {
+/*.content {
 	padding: 5px;
-}
+}*/

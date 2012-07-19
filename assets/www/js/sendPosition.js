@@ -1,7 +1,7 @@
 function sendPosition() {
     document.getElementById("frame2").style.zIndex=10;
     animate(200);
-    storage=window.localStorage;
+    var storage=window.localStorage;
     var numr=storage.getItem("NumReports");
     if(numr>0) {
         var user_input=confirm("Are you sure you want to report this location?");
@@ -17,7 +17,6 @@ function sendPosition() {
     function send(position) {
         var date=new Date();
         var time=date.getTime();
-        var storage=window.localStorage;
         $.ajax( {
             type: "POST",
             url: "http://electric-galaxy-9820.herokuapp.com/reports/mobile_create.json",
@@ -29,7 +28,7 @@ function sendPosition() {
                     remember_token: storage.getItem("token"),
                     },
             success: function(response) { 
-                alert("Report successful ");
+                alert(response["response"]);
            
            }
         } );

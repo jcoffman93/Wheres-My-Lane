@@ -14,16 +14,18 @@
     <div id="header">
       <center><img src="img/WML_header.png"></center>
     </div>
-    
-    <div id="wrap">
+    <div id="stripes">
+      <div id="wrap">     
         <div id="main">
-        <h1>Signup</h1>
-        <form name="signup" action="http://electric-galaxy-9820.herokuapp.com/users/mobile_create.json" method="post">
-        	Email: <input type="text" id="email" name="email" /><br />
-        	<center><button type="button" onClick="sendUserInfo()">Submit</button></center>
-        </form>
-        	
+          <div id="signup_box">
+            <center><h1>Signup</h1></center>
+            <form name="signup" action="http://electric-galaxy-9820.herokuapp.com/users/mobile_create.json" method="post">
+        	   Email: <input type="text" id="email" /><br />
+        	   <center><button type="button" onClick="sendUserInfo()">Submit</button></center>
+            </form>
+          </div>       	
         </div>
+      </div>
     </div>
   
   </body>

@@ -21,7 +21,7 @@ function onResume() {
 // onSuccess Geolocation
 function onSuccess(position) {
     var element=document.getElementById("accuracy");
-    element.innerHTML="Accuracy: "+position.coords.accuracy+"m";            
+    //element.innerHTML="Accuracy: "+position.coords.accuracy+"m";            
 }
 
 // onError Callback receives a PositionError object

@@ -3,41 +3,31 @@
 
 	<head>
 		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-		<script type="text/javascript" src="js/quickpager.jquery.js"></script>
 		<script type="text/javascript" src="js/getMessages.js"></script>
 		<script type="text/javascript" src="js/link_to_page.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/layout.css">
 		<link rel="stylesheet" type="text/css" href="css/message_table.css">
-		<script type="text/javascript">
-			
-			//paginate message list
-			//$('ul.messages').quickPager({pageSize:"2"});
-			
-		</script>
+		<script type="text/javascript" src="js/iscroll.js"></script>
 	</head>
 	
-	<body onLoad="getMessages()">
+	<body>
 
-		<div id="header">
+		<div class="header">
         	<center><img src="img/WML_header.png"></center>
     	</div>
 
-		<div id="wrap">
-			<div id="main">
-				<center><h1>Updates</h1></center>
-				<ul id="messages">Grabbing updates...</ul>
-			</div>
+		<div id="wrapper">
+			<center><h1>Updates</h1></center>
+			<ul id="messages">Grabbing updates...</ul>
 		</div>
 		
-		<div id="footer">
-        	<footer>
-        		<ul>
-        			<li><span ontouchstart="link_report()"><img src="img/img_report_link.png"></span></li>
-        			<li><span ontouchstart="link_map()"><img src="img/img_map_link.png"></span></li> 	   		
-    	   			<li><span ontouchstart="link_updates()"><img src="img/img_update_link.png"></span></li>
-    	   			<li><span ontouchstart="link_about()"><img src="img/img_about_link.png"></span></li>
-    	   		</ul>
-        	</footer>
+		<div class="footer">
+        	<ul>
+        		<li><span ontouchstart="link_report()"><img src="img/img_report_link.png"></span></li>
+        		<li><span ontouchstart="link_map()"><img src="img/img_map_link.png"></span></li> 	   		
+    	   		<li><span ontouchstart="link_updates()"><img src="img/img_update_link.png"></span></li>
+    	   		<li><span ontouchstart="link_about()"><img src="img/img_about_link.png"></span></li>
+    	   	</ul>
     	</div>
 	
 	</body>
