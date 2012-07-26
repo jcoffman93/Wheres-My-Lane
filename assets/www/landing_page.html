@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Landing</title>
 		<script type="text/javascript" charset="utf-8" src="js/cordova-1.8.0.js"></script>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/layout.css">
-		<script type="text/javascript">
-			actionbutton=document.getElementById("actionbutton");
-			actionbutton.onclick=function() { window.location="signup.html" };
-		</script>
+		<script type="text/javascript" src="js/landing_logic.js"></script>
 	</head>
 
 	<body>
-
-		<div id="content">
-			<div id="landing_box">
-				<h3>Welcome to Where's My Lane</h3>
-				<block>
-					Where's My Lane is an application designed to help the city of Boston collect data regarding the incidence of double-parked vehicles. Sign up, then press the shiny red "Report" button to send your current coordinates to the city. Please note that this application is a data collection tool, and is not designed to aid in reporting individual vehicles.
-				</block>
+		<div id="landingpage">
+			<div id="content">
+				<div id="landing_box">
+					<h3>Welcome to Where's My Lane</h3>
+					<block>
+						Where's My Lane is a data collection tool designed to help the city of Boston improve the lives of its bicyclists. <br />
+						You can use this app to send your current geographic coordinates to the city. <br />
+					</block>
+				</div>
+				<div id="data_disclaimer">Please note that this is a data collection tool, and cannot be used to report individual offenders.</div>
+				<center><div id="actionbutton">Sign up now!</div></center>
 			</div>
-			<center><div id="actionbutton">
-				Sign up now!
-			</div></center>
 		</div>
 	</body>
 </html>

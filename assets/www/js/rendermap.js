@@ -1,14 +1,15 @@
+/* Renders map on map_page.html. See Google Maps API V3 for complete reference. */
 var map;
 function initialize() {
 
-  //initializing map view
+  // Set options for map.
   var myOptions = {
     zoom: 13,
-     //change to current position, otherwise set this as default
+     // Change to current position, otherwise set this as default
     center: new google.maps.LatLng(42.32657009662249, -71.06678009033203),
     disableDefaultUI: true,
     panControl: true,
-    zoomControl: true,
+    zoomControl: false,
           
     scaleControl: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP, 
@@ -23,11 +24,12 @@ function initialize() {
     }
   };
   map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
-  $.getJSON('http://electric-galaxy-9820.herokuapp.com/reports.json', function(data) {
+  /* Gets reports from server, then adds them to map */
+  /*$.getJSON('http://electric-galaxy-9820.herokuapp.com/reports.json', function(data) {
       for(i=0; i<data.length; i++) {
         addMarker(data[i]["latitude"], data[i]["longitude"]);
       }
-  });
+  });*/
 
 }
 

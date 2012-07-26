@@ -24,7 +24,7 @@
         android:label="@string/app_name" >
         <activity
             android:name=".HelloCordova2Activity"
-            android:configChanges="screenLayout|keyboardHidden"
+            android:configChanges="orientation|screenLayout|keyboardHidden"
             android:label="@string/app_name" >
             
             <intent-filter>

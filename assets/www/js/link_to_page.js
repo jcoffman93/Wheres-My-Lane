@@ -1,3 +1,4 @@
+/* Controls navigation for footer */
 function link_report() {window.location="index.html";}
 
 function link_map() {window.location="map_page.html";}

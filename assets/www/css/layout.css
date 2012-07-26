@@ -18,41 +18,63 @@ body {
 	background-size: 50px 50px;
 }
 
+/* Forces images to scale to device's resolution */
 img {max-width: 100%;}
 
+/* Styles header, which contains the "Where's My Lane" text */
 .header {
 	top:0px;
 	left:0px;
-	padding-top:2px;
+	padding:1%;
+	padding-top:4%;
 	position:fixed;
-	z-index: 50;
+	z-index: 15;
 	height:40px;
 	width:100%;
 	background-color:#e0e2e2;
 	border-bottom:solid 1px #c9cbcb;
 }
 
-/*#content {
+/* Styling for Updates Page */
+#listhead {
 	z-index:10;
-	height:100%;
-	padding-top:40px;
-	padding-bottom: 60px; 
-}  */
-
-#wrapper {
-	max-height:100%;
-	overflow:auto;
-	position:relative;
-	padding-top:40px;
-	padding-bottom: 100px;
+	position:fixed;
+	width:100%;
+	top:10%;
+	background-color:#9cd99c;
+	border-bottom:solid 1px #73a073;
 }
 
-.footer {
-	
+#wrapper {
+	top:20%;
+	margin-bottom:30%;
+	z-index:5;
+	max-height:100%;
+	overflow:auto;
+	position:absolute;
+	padding-top:40px;
+	padding-bottom: 100px;
+	list-style-type:none;
+	overflow:auto;
+	margin:0px;
+	padding:0px;
+}
+
+#wrapper li {
+	border:1px solid  #000000;
+	border-style:solid none solid none;
+	background-color: #ffffff;
+	padding:10px;
+}
+
+div#time { display:block; }
+
+/* Styling for footer containing navigation icons */
+.footer {	
 	position: fixed;
 	bottom:0px;
 	left:0px;
-	z-index: 50;
+	z-index: 15;
 	margin-top: -60px; 
 	height: 60px;
 	width: 100%;
@@ -70,83 +92,71 @@ img {max-width: 100%;}
 
 .footer span {padding:4%;}
 
-/*#button { 
-	height:100%;
-	position:absolute; 
-}*/
-
+/* Styling for button press animation. */
 #frame1 {
 	z-index:5;
 	position:absolute;
 }
 
-#frame2 {
-	position:absolute;
-}
+#frame2 {position:absolute;}
 
+/* Styling for various boxes and buttons */
 #signup_box {
 	margin-top:40%;
 	margin-left:5%;
 	margin-right: 5%;
 	padding-top:3%;
 	padding-bottom: 3%;
-	z-index:50;
+	z-index:15;
 	background-color:#e0e2e2;
-	/*border:solid 2px #ffffff;*/
 	border-radius:10px;
 }
 
 #landing_box {
 	margin:5% 5% 5% 5%;
 	padding:3%;
-	z-index:50;
+	z-index:15;
 	background-color:#e0e2e2;
-	/*border:solid 2px #ffffff;*/
 	border-radius:10px;
+}
+
+#data_disclaimer {
+	color:#f64c4c;
+	background-color:#f6df4c;
+	margin:5% 5% 5% 5%;
+	padding:3%;
+	border-radius: 10px;
 }
 
 #actionbutton {
 	margin:0% 15% 0% 15%;
 	padding:5%;
-	z-index:50;
-	background-color:#7fde42;
+	z-index:15;
+	background-color:#e0e2e2;
+	background:-webkit-gradient(
+		linear, 
+		50% 0%, 
+		50% 100%, 
+		from(#e0e2e2),  
+		to(#bcbdbd));
+	border:2px solid #bcbdbd;
 	border-radius:10px;
 }
 
 #about_message {
-	margin:15% 5% 0% 5%;
+	margin:0% 5% 0% 5%;
+	top:14%;
+	position:relative;
 	padding:3%;
-	z-index:50;
+	z-index:15;
 	background-color:#e0e2e2;
-	/*border:solid 2px #ffffff;*/
 	border-radius:10px;
 }
-/*
-#stripes {
-	height: inherit;
-	padding-top:40px;
-	padding-bottom:50%;
-	background-color:#4e4ef4;
-	background-image:-webkit-gradient(
-		linear, 
-		0% 0%, 
-		0% 100%, 
-		from(#b0cdde), 
-		color-stop(50%, #b0cdde), 
-		color-stop(50%, #77a8bf), 
-		to(#77a8bf));
-	background-size: 50px 50px;
-}*/
 
-
+/* Styling for map */
 #map_canvas {
-    margin: 0;
-    padding: 65%;
-    height: 100%;
-    position:fixed; 
-    top:0px;
+	margin:0% 5% 0% 5%;
+    height:70%;
+    top:14%;
+    border-radius:10px;
 }
-
-/*.content {
-	padding: 5px;
-}*/

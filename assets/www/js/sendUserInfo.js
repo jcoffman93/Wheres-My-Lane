@@ -1,3 +1,4 @@
+/* Sends user's email to server, which returns remember token and NumReports setting. */
 function sendUserInfo() {
 	$.ajax( {
             type: "POST",

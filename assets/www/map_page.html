@@ -2,6 +2,7 @@
 <html>
 	
 	<head>
+		<title>Map</title>
 		<link rel="stylesheet" type="text/css" href="css/layout.css">
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -9,9 +10,6 @@
 		<script type="text/javascript" src="js/rendermap.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta charset="UTF-8">
-		<script "text/javascript">
-			document.addEventListener('ready', function() {document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);}, false);
-		</script>
 	</head>
 	
 	<body onLoad="initialize()">
@@ -20,9 +18,7 @@
         	<center><img src="img/WML_header.png"></center>
     	</div>
 
-		<div id="content">
-			<div id="map_canvas"></div>
-		</div>
+		<div id="map_canvas"></div>
 		
 		<div class="footer">
         	<footer>

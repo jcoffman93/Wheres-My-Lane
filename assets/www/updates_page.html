@@ -2,12 +2,12 @@
 <html>
 
 	<head>
+		<title>Updates</title>
 		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 		<script type="text/javascript" src="js/getMessages.js"></script>
 		<script type="text/javascript" src="js/link_to_page.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/layout.css">
-		<link rel="stylesheet" type="text/css" href="css/message_table.css">
-		<script type="text/javascript" src="js/iscroll.js"></script>
+		<script type="text/javascript" src="js/iscroll-lite.js"></script>
 	</head>
 	
 	<body>
@@ -15,12 +15,12 @@
 		<div class="header">
         	<center><img src="img/WML_header.png"></center>
     	</div>
-    	<center><h1>Updates</h1></center>
-		<div id="wrapper">
-			
-			<ul id="messages">Grabbing updates...</ul>
-		</div>
-		
+
+    	<!-- ul#wrapper contains messages pulled from the server. Support for scrolling
+    		within a container on Android/iOS is imperfect. The iScroll 4 script allows for this functionality; however, it requires a specific page structure to function correctly. Scrollable area must not be placed within a container. See iScroll 4 documentation for additional reference (http://cubiq.org/iscroll-4).
+    	-->
+    	<div id="listhead"><center><h3>Updates</h3></center></div>
+		<ul id="wrapper"></ul>
 		<div class="footer">
         	<ul>
         		<li><span ontouchstart="link_report()"><img src="img/img_report_link.png"></span></li>

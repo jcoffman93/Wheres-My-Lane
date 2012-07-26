@@ -1,9 +1,9 @@
-watchId = null;
+
 function getLocation() {    
     navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true }); 
-    watchId = navigator.geolocation.watchPosition(onSuccess, onError, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
-    document.addEventListener("pause", onPause(), false);
-    document.addEventListener("resume", onResume(), false);
+    //watchId = navigator.geolocation.watchPosition(onSuccess, onError, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+    //document.addEventListener("pause", onPause(), false);
+    //document.addEventListener("resume", onResume(), false);
 }
         
 function onPause() {
@@ -20,8 +20,9 @@ function onResume() {
         
 // onSuccess Geolocation
 function onSuccess(position) {
-    var element=document.getElementById("accuracy");
-    //element.innerHTML="Accuracy: "+position.coords.accuracy+"m";            
+    var storage=window.localStorage;
+    storage.setItem("last_position", position); 
+    return position;       
 }
 
 // onError Callback receives a PositionError object

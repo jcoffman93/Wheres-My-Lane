@@ -1,3 +1,4 @@
+/* Displays frame 2 of button animation for 'a' miliseconds */
 function animate(a) {
 	setTimeout("wait()", a);
 }

@@ -10,6 +10,6 @@ public class HelloCordova2Activity extends DroidGap {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.setBooleanProperty("keepRunning", false);
-        super.loadUrl("file:///android_asset/www/index.html");
+        super.loadUrl("file:///android_asset/www/landing_page.html");
     }
 }
