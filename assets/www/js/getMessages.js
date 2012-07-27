@@ -1,6 +1,7 @@
 /* Grabs messages from server as JSON and puts them in ul#wrapper */
 $(document).ready(function() {
-  displayMessages();
+  var myScroll=new iScroll("wrapper");
+  //displayMessages();
   //setInterval(function() {displayMessages()}, 10000);
 });
 
