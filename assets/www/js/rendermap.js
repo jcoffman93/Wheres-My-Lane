@@ -8,22 +8,20 @@ function initialize() {
      // Change to current position, otherwise set this as default
     center: new google.maps.LatLng(42.32657009662249, -71.06678009033203),
     disableDefaultUI: true,
-    panControl: true,
-    zoomControl: false,
-          
-    scaleControl: true,
+    panControl: false,
+    zoomControl: false,         
+    scaleControl: false,
     mapTypeId: google.maps.MapTypeId.ROADMAP, 
-    panControl: true,
-    panControlOptions: {
-      position: google.maps.ControlPosition.TOP_RIGHT
-    },
-    zoomControl: true,
-    zoomControlOptions: {
-      style: google.maps.ZoomControlStyle.LARGE,
-      position: google.maps.ControlPosition.TOP_RIGHT
-    }
   };
   map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+  addmarker(42.32657009662249, -70.06678009033203);
+  addmarker(41.32657009662249, -71.26678009033203);
+  addmarker(42.32657009662249, -71.86678009033203);
+  addmarker(42.32657056662249, -71.71678009033203);
+  addmarker(42.66657009662249, -71.12678009033203);
+  addmarker(42.55657009664949, -71.35678009033203);
+  addmarker(42.12657009662249, -71.26678009033203);
+  addmarker(42.33657009662249, -71.96678009033203);
   /* Gets reports from server, then adds them to map */
   /*$.getJSON('http://electric-galaxy-9820.herokuapp.com/reports.json', function(data) {
       for(i=0; i<data.length; i++) {
