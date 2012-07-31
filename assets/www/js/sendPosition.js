@@ -27,7 +27,7 @@ function sendPosition() {
             var time=date.getTime();
             $.ajax( {
                 type: "POST",
-                url: "http://electric-galaxy-9820.herokuapp.com/reports/mobile_create.json",
+                url: "www.wheresmylane.org/reports/mobile_create.json",
                 data: { latitude: position.coords.latitude, 
                     longitude: position.coords.longitude, 
                     timestamp: time, 

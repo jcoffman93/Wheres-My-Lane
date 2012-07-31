@@ -16,6 +16,7 @@ body {
 		color-stop(50%, #77a8bf), 
 		to(#77a8bf));
 	background-size: 50px 50px;
+	overflow:hidden;
 }
 
 /* Forces images to scale to device's resolution */
@@ -90,6 +91,15 @@ div#time { display:block; }
 
 .footer span {padding:4%;}
 
+.footer li#report_current, #map_current, #updates_current, #about_current {
+	padding-top:10%;
+	margin:1%;
+	border-radius:10px;
+	background-color:#9cd99c;
+}
+
+
+
 /* Styling for button press animation. */
 #frame1 {
 	z-index:5;
@@ -125,6 +135,22 @@ div#time { display:block; }
 	padding:3%;
 	border-radius: 10px;
 }
+#button {
+	font-size:large;
+	margin:3% 30% 0% 30%;
+	border-radius:10px;
+	z-index:15;
+	background-color:#9cd99c;
+	background:-webkit-gradient(
+		linear, 
+		50% 0%, 
+		50% 100%, 
+		from(#9cd99c),  
+		to(#73a073));
+	border:2px solid #73a073;
+}
+
+/*#loading {visibility:visible;}*/
 
 #actionbutton {
 	margin:0% 15% 0% 15%;

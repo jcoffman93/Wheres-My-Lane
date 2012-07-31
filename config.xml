@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget
+	id				= "com.wheres.mylane"
+	version			= "1.0.0">
+
+	<name>Where's My Lane</name>
+
+	<description>
+		An app for reporting improperly parked vehicles
+	</description>
+
+	<icon />
+
+	<preference name="orientation" value="landscape" />
+
+	<preference name="webviewbounce" value="false" />
+</widget>
+
