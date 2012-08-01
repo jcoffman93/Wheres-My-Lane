@@ -9,12 +9,12 @@ function sendPosition() {
     animate(200);
     var watchId=null;
     var storage=window.localStorage;
-    var numr=storage.getItem("NumReports");
+    var numr=storage.getItem("numReports");
     if(numr>0) {
         var user_input=confirm("Are you sure you want to report this location?");
         if (user_input) {
             watchId=navigator.geolocation.watchPosition(send, onError, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
-            storage.setItem("NumReports", numr-=1);
+            storage.setItem("numReports", numr-=1);
         }
     }
     if(numr<=0) {
@@ -27,7 +27,7 @@ function sendPosition() {
             var time=date.getTime();
             $.ajax( {
                 type: "POST",
-                url: "www.wheresmylane.org/reports/mobile_create.json",
+                url: "http://thawing-citadel-8225.herokuapp.com/reports/mobile_create.json",
                 data: { latitude: position.coords.latitude, 
                     longitude: position.coords.longitude, 
                     timestamp: time, 

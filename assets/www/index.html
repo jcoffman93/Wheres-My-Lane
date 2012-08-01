@@ -2,30 +2,24 @@
 <html>
   <head>
     <title>Report</title>
-
+    <script type="text/javascript" charset="utf-8" src="js/cordova-1.9.0.js"></script>
     <link rel="stylesheet" type="text/css" href="css/layout.css">
-    <script type="text/javascript" charset="utf-8" src="js/cordova-2.0.0.js"></script>
-    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script> 
     <script type="text/javascript" src="js/link_to_page.js"></script>
     <script type="text/javascript" src="js/getLocation.js"></script>
     <script type="text/javascript" src="js/animate.js"></script>
     <script type="text/javascript" src="js/sendPosition.js"></script>
-    <script type="text/javascript" src="js/report_logic.js"></script>
-		
+    <script type="text/javascript" src="js/report_logic.js"></script>		
   </head>
   <body>
     <div id="reportpage">
         <center><div class="header">
             <img src="img/WML_header.png">
         </div></center>
-
-        <div id="content">
-        	    <div id="button" ontouchstart="sendPosition()">
-                    <img id="frame2" src="img/button_frame_2.png">
-                    <img id="frame1" src="img/button_frame_1.png">            
-                </div>
+	    <div id="report_button" ontouchstart="sendPosition()">
+            <img id="frame2" src="img/button_frame_2.png">
+            <img id="frame1" src="img/button_frame_1.png">            
         </div>
-        <div id="instructions">Sign up, then press the shiny red "Report" button whenever you see a vehicle parked in a bike lane. </div>
         <div class="footer">
             <footer>
         	   <ul>

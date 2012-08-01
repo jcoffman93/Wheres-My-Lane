@@ -6,7 +6,7 @@ $(document).ready(function() {
 });
 
 function displayMessages() {
-	$.getJSON('www.wheresmylane.org/messages.json', function(data) {
+	$.getJSON('http://www.wheresmylane.org/messages.json', function(data) {
   		var items = [];
   		for(i=0; i<data.length; i++) {
   			items.push('<li>' + data[i]["content"] + '<div id=time><sub>' + data[i]["created_at"] + '</sub></div></li>');
