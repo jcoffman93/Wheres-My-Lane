@@ -25,11 +25,11 @@ $(document).ready(function() {
     addMarker(42.12657009662249, -71.26678009033203);
     addMarker(42.33657009662249, -71.96678009033203);
     /* Gets reports from server, then adds them to map */
-    $.getJSON('http://pacific-badlands-6737.herokuapp.com/reports.json', function(data) {
-        for(i=0; i<10 /*data.length*/ ; i++) {
+    /*$.getJSON('http://pacific-badlands-6737.herokuapp.com/reports.json', function(data) {
+        for(i=0; i<data.length ; i++) {
           addMarker(data[i]["latitude"], data[i]["longitude"]);
         }
-    });
+    });*/
 
   }
 

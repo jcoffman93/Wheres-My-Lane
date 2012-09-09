@@ -4,7 +4,7 @@
 	<head>
 		<title>Map</title>
 		<link rel="stylesheet" type="text/css" href="css/layout.css">
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		
 		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 		<script type="text/javascript" src="js/link_to_page.js"></script>
 		<script type="text/javascript" src="js/rendermap.js"></script>
@@ -30,6 +30,9 @@
     	   		</ul>
         	</footer>
     	</div>
-	
+    	<!-- Putting this script in the head slows page transition to map
+    		page substantially. Because there was no indication of the phone taking any action, the user could not be sure if their touch input
+    		was registered by the device. -->
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	</body>
 </html>
