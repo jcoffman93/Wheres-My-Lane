@@ -149,7 +149,14 @@ div#time { display:block; }
 	border:2px solid #73a073;
 }
 
-/*#loading {visibility:visible;}*/
+#loading {
+	margin-top: 20%;
+	margin-left: auto;
+	margin-right: auto;
+	visibility: hidden;
+	text-align: center;
+	background-color: #ffffff;
+}
 
 #actionbutton {
 	margin:0% 15% 0% 15%;

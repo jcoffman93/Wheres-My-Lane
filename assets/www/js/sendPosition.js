@@ -27,7 +27,7 @@ function sendPosition() {
             var time=date.getTime();
             $.ajax( {
                 type: "POST",
-                url: "http://thawing-citadel-8225.herokuapp.com/reports/mobile_create.json",
+                url: "http://pacific-badlands-6737.herokuapp.com/reports/mobile_create.json",
                 data: { latitude: position.coords.latitude, 
                     longitude: position.coords.longitude, 
                     timestamp: time, 

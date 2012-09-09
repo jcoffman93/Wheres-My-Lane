@@ -16,20 +16,20 @@ $(document).ready(function() {
       mapTypeId: google.maps.MapTypeId.ROADMAP, 
     };
     map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
-    addmarker(42.32657009662249, -70.06678009033203);
-    addmarker(41.32657009662249, -71.26678009033203);
-    addmarker(42.32657009662249, -71.86678009033203);
-    addmarker(42.32657056662249, -71.71678009033203);
-    addmarker(42.66657009662249, -71.12678009033203);
-    addmarker(42.55657009664949, -71.35678009033203);
-    addmarker(42.12657009662249, -71.26678009033203);
-    addmarker(42.33657009662249, -71.96678009033203);
+    addMarker(42.32657009662249, -70.06678009033203);
+    addMarker(41.32657009662249, -71.26678009033203);
+    addMarker(42.32657009662249, -71.86678009033203);
+    addMarker(42.32657056662249, -71.71678009033203);
+    addMarker(42.66657009662249, -71.12678009033203);
+    addMarker(42.55657009664949, -71.35678009033203);
+    addMarker(42.12657009662249, -71.26678009033203);
+    addMarker(42.33657009662249, -71.96678009033203);
     /* Gets reports from server, then adds them to map */
-    /*$.getJSON('http://electric-galaxy-9820.herokuapp.com/reports.json', function(data) {
-        for(i=0; i<data.length; i++) {
+    $.getJSON('http://pacific-badlands-6737.herokuapp.com/reports.json', function(data) {
+        for(i=0; i<10 /*data.length*/ ; i++) {
           addMarker(data[i]["latitude"], data[i]["longitude"]);
         }
-    });*/
+    });
 
   }
 
